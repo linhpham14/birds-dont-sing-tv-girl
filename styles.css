@@ -1,0 +1,194 @@
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url(bg_img.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: left top;
+}
+
+
+#curtain {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#title-scene {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1440 / 1024;
+    margin: 0px 0px 20px 0px; /*top right bottom left*/
+}
+
+#birds-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: center;
+    animation: animating-birds-title 4s ease-in-out infinite;
+}
+@keyframes animating-birds-title {
+    0% {
+        transform: translateY(0) scale(0.7);
+    }
+    50% {
+        transform: translateY(-10px) scale(0.7);
+    }
+    100% {
+        transform: translateY(0) scale(0.7);
+    }
+}
+#title {
+    position: absolute;
+    top: 4.88%;
+    left: 5%;
+    z-index: 3;
+    width: 90%;
+}
+h2{
+    color: #020401;
+    font-family: "Rock Salt", cursive;
+    font-size: 1.74vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 4;
+
+    width: 7.74vw;
+    height: 9.57vh;
+    
+    animation: animating-h2 3s ease-in-out infinite;
+}
+@keyframes animating-h2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#light {
+    position: absolute;
+    top: -50px;
+    left: auto; 
+    width: 100%;
+    z-index: 2;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+#shelf-scene {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 60vw;
+    max-width: 980px;
+    margin: -8vw auto 0;
+    z-index: 0;
+}
+
+#music-button {
+    position: absolute;
+    top: -8.5%;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+    width: 54%;
+    z-index: 2;
+
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#music-button:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+
+#shelf {
+    display: block;
+    width: 100%;
+    aspect-ratio: 109/67;
+}
+
+.regular-text{
+    color: #020401;
+    font-family: "Indie Flower", cursive;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:normal;
+    margin: 10px 10px 10px 10px;
+}
+
+#she-said{
+    position: absolute;
+    top: calc(100vw + 500px);
+    left: 17vw;
+}
+#text-after-she-said{
+    position: absolute;
+    top: calc(100vw + 560px);
+    left: 30vw;
+    text-align: left;
+    width: 30vw;
+    height: auto;
+}
+#she-said-anim{
+    position: absolute;
+    width: 100%;
+    left: auto;
+    top: calc(100vw + 500px);
+
+    animation: animating-after-she-said 3s ease-in-out infinite;
+}
+@keyframes animating-after-she-said {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#text-after-she-said2{
+    position: absolute;
+    top: calc(100vw + 870px);
+    left: 50vw;
+    text-align: right;
+}
+
+#bird-fall{
+    position: absolute;
+    top: 3451px;
+}
+#window-bird-fall{
+    width: 100%;
+    scale: 1.5;
+    position: absolute;
+    left: 50vw;
+}
+#text-bds{
+    text-align: right;
+}
+#dont-listen{
+    position: absolute;
+    top: 4000px;
+    width: 100%;
+    scale: 0.8;
+}
