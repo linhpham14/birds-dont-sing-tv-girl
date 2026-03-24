@@ -264,7 +264,7 @@ h2{
 
 #bird-fall{
     position: absolute;
-    top: calc(100vw + 2000px);
+    top: calc(100vw + 3000px);
 }
 #window-bird-fall{
     width: 100%;
