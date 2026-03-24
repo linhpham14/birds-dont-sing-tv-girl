@@ -7,7 +7,10 @@ body {
     background-size: cover;
     background-position: left top;
 }
-
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
 
 #curtain {
     position: absolute;
@@ -32,7 +35,7 @@ body {
     transform-origin: center;
     animation: animating-birds-title 4s ease-in-out infinite;
 }
-@keyframes animating-birds-title {
+    @keyframes animating-birds-title {
     0% {
         transform: translateY(0) scale(0.7);
     }
@@ -68,7 +71,7 @@ h2{
     
     animation: animating-h2 3s ease-in-out infinite;
 }
-@keyframes animating-h2 {
+    @keyframes animating-h2 {
     0% {
         transform: translateY(0);
     }
@@ -92,15 +95,14 @@ h2{
 }
 
 #shelf-scene {
-    position: relative;
-    left: auto;
-    transform: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60vw;
     max-width: 980px;
-    margin: -8vw auto 0;
+    margin: -8vw 0 0;
     z-index: 0;
 }
-
 #music-button {
     position: absolute;
     top: -8.5%;
@@ -113,17 +115,16 @@ h2{
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-
 #music-button:hover {
     transform: translateX(-50%) scale(1.03);
 }
-
 #shelf {
     display: block;
     width: 100%;
     aspect-ratio: 109/67;
 }
 
+/*---TEX EFFECTS STARTS HERE---*/
 .regular-text{
     color: #020401;
     font-family: "Indie Flower", cursive;
@@ -133,29 +134,68 @@ h2{
     line-height:normal;
     margin: 10px 10px 10px 10px;
 }
+.emphasize{
+    color: #594E0A;
 
+    font-family: "Rock Salt";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.scroll-line {
+    display: inline-block;
+    opacity:" 0.1";
+    transform: translateY(14px);
+    will-change: opacity, transform
+}
+    @keyframes animating-scroll-line {
+    from {
+        opacity: 0.1;
+    }
+    to{ 
+        opacity: 1;
+    }
+}
+/*---TEX EFFECTS ENDS HERE---*/
+
+/*SHE SAID SCENE*/
+#she-said-scene {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 36px;
+}
 #she-said{
     position: absolute;
-    top: calc(100vw + 500px);
+    top: calc(100vw + 490px);
     left: 17vw;
 }
 #text-after-she-said{
     position: absolute;
-    top: calc(100vw + 560px);
+    top: calc(100vw + 600px);
     left: 30vw;
     text-align: left;
-    width: 30vw;
+    width: 35vw;
     height: auto;
 }
-#she-said-anim{
-    position: absolute;
-    width: 100%;
-    left: auto;
-    top: calc(100vw + 500px);
+/*VISUAL ELEMENTS*/
 
-    animation: animating-after-she-said 3s ease-in-out infinite;
+#she-said-anim-gb{
+    position: absolute;
+    z-index: 5;
+    width: 12vw;
+    height: auto;
+    aspect-ratio: 14/9;
+    left: 10vw;
+    top: calc(100vw + 800px);
+        /*Đặt vị trí phần tử cách mép trên một 
+        khoảng bằng đúng chiều rộng của màn hình cộng 
+        thêm 600 pixel?*/
+    
+    animation: animating-she-said-GB 3s ease-in-out infinite;
 }
-@keyframes animating-after-she-said {
+    @keyframes animating-she-said-GB {
     0% {
         transform: translateY(0);
     }
@@ -166,16 +206,65 @@ h2{
         transform: translateY(0);
     }
 }
-#text-after-she-said2{
+#she-said-anim-rb{
     position: absolute;
-    top: calc(100vw + 870px);
-    left: 50vw;
+    right: 5vw ;
+    top: calc(100vw + 750px);
+
+    width: 25vw;
+    height: auto;
+    aspect-ratio: 59/42;
+
+    animation: animating-she-said-RB 3s ease-in-out infinite;
+}
+    @keyframes animating-she-said-RB {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#those-are-her{
+    position: absolute;
+    top: calc(100vw + 1300px);
+    right: 5vw;
     text-align: right;
+}
+
+#as-far-as1{
+    position: absolute;
+    top: calc(100vw + 1800px);
+    left: 5vw;
+}
+#door{
+    width: 26.32vw;  /* 379 / 1440 * 100 */
+    height: auto;
+    aspect-ratio: 31/79;
+    position: absolute;
+    top: calc(100vw + 1800px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#gbird-walk-out {
+    width: 26.32vw;
+    height: auto;
+    aspect-ratio: 31/79;
+    position: absolute;
+    top: calc(100vw + 1800px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
 }
 
 #bird-fall{
     position: absolute;
-    top: 3451px;
+    top: calc(100vw + 2000px);
 }
 #window-bird-fall{
     width: 100%;
