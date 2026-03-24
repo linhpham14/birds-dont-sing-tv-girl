@@ -250,7 +250,7 @@ h2{
     left: 5vw;
 }
 #door{
-    width: 17vw;  /* 379 / 1440 * 100 */
+    width: 17vw; 
     height: auto;
     aspect-ratio: 31/79;
     position: absolute;
@@ -277,18 +277,18 @@ h2{
     left: 5vw;
 }
 
-#bird-fall{
-    display: block;
-    position: absolute;
-    top: calc(100vw + 3000px);
-}
+
 #window-bird-fall{
-    width: 37vw;
+    width: 17vw;
     height: auto;
     position: absolute;
-    left: 50vw;
-    transform: translateX(-50%);
+    top: calc(100vw + 1950px);
+    right: 5vw;
+    z-index: 3;
+    transform-origin: center;
 }
+
+
 #text-bds{
     text-align: right;
 }
