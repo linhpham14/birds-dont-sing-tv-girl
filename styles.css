@@ -53,6 +53,11 @@ div {
     z-index: 3;
     width: 90%;
 }
+#title-scroll {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
 h2{
     color: #020401;
     font-family: "Rock Salt", cursive;
@@ -128,7 +133,7 @@ h2{
 .regular-text{
     color: #020401;
     font-family: "Indie Flower", cursive;
-    font-size: 30px;
+    font-size: 1.8vw;
     font-style: normal;
     font-weight: 400;
     line-height:normal;
@@ -138,7 +143,7 @@ h2{
     color: #594E0A;
 
     font-family: "Rock Salt";
-    font-size: 25px;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -235,13 +240,17 @@ h2{
     text-align: right;
 }
 
+#walk-out-scene{
+    display: inline-flex;
+    
+}
 #as-far-as1{
     position: absolute;
     top: calc(100vw + 1800px);
     left: 5vw;
 }
 #door{
-    width: 26.32vw;  /* 379 / 1440 * 100 */
+    width: 17vw;  /* 379 / 1440 * 100 */
     height: auto;
     aspect-ratio: 31/79;
     position: absolute;
@@ -249,9 +258,8 @@ h2{
     left: 50%;
     transform: translateX(-50%);
 }
-
 #gbird-walk-out {
-    width: 26.32vw;
+    width: 17vw;
     height: auto;
     aspect-ratio: 31/79;
     position: absolute;
@@ -261,16 +269,25 @@ h2{
     z-index: 2;
     pointer-events: none;
 }
+#small-window-left{
+    width: 17vw;
+    height: auto;
+    position: absolute;
+    top: calc(100vw + 1950px);
+    left: 5vw;
+}
 
 #bird-fall{
+    display: block;
     position: absolute;
     top: calc(100vw + 3000px);
 }
 #window-bird-fall{
-    width: 100%;
-    scale: 1.5;
+    width: 37vw;
+    height: auto;
     position: absolute;
     left: 50vw;
+    transform: translateX(-50%);
 }
 #text-bds{
     text-align: right;
