@@ -46,3 +46,33 @@ if (musicButton) {
 
 window.playAudio = playAudio;
 window.pauseAudio = pauseAudio;
+
+
+
+// SCrollTrigger plugin from GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Select all elements with class="scroll-line"
+const lines = document.querySelectorAll('.scroll-line');
+
+// Animation, each line fade up as it enters viewport
+lines.forEach((line) => {
+  gsap.fromTo(line, 
+    { 
+      opacity: 0, 
+      y: 20 // Starts 20px lower
+    }, 
+    {
+      opacity: 1, 
+      y: 0, // Moves to original position
+      duration: 1,
+      scrollTrigger: {
+        trigger: line,           // The animation starts when this specific line is visible
+        start: "top 85%",        // Start when the top of the line hits 85% of viewport height
+        end: "top 60%",          // End when it hits 60%
+        scrub: true,             // Makes the animation "tethered" to the scroll bar
+        // markers: true,        // Uncomment this to see the start/end lines while debugging!
+      }
+    }
+  );
+});
