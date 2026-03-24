@@ -6,10 +6,6 @@
     <title>Birds Don't Sing - TV Girl</title>
     <link rel="stylesheet" href="styles.css">
 
-        <!-- GSAP Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <!-- GSAP ScrollTrigger Plugin, for elements w/ class="scroll-line" -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <!--JS-->
     <script src="script.js" defer></script>
 
@@ -22,7 +18,7 @@
 <body>
     <div><img src="light solid.png" id="light">
         <img src="curtain.png" id="curtain">
-        <div id="title-scene">
+        <div id="title-scene" data-speed="0.8">
             <img src="birds_at_title.webp" id="birds-title">
             <img src="title_no_birds.webp" id="title">
             <h2>TV Girl</h2>
@@ -44,7 +40,16 @@
         <div id="she-said-ANIM">
             <img src="She-said-anim-gb.webp" id="she-said-anim-gb">
             <div id="she-said-TEXT">
-                <p class="regular-text" id="she-said"> <emp class="emphasize">She</emp> said,</p>
+                <p class="regular-text" id="she-said"> 
+                    <span class="scroll-line"><emp class="emphasize">She</emp> said,</span><br>
+                    <br>
+                
+                    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <!-- GSAP ScrollTrigger Plugin, for elements w/ class="scroll-line" -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+                
                 <p class="regular-text" id="text-after-she-said">
                     <span class="scroll-line">"How could you joke at a time like this?</span><br>
                     <br>
@@ -60,8 +65,8 @@
             <img src="she-said-anim-rb.webp" id="she-said-anim-rb">
         </div>
         <p class="regular-text" id="those-are-her">
-            Those are <em class="emphasize">her</em> words,<br>
-            not mine</p>
+            <span class="scroll-line">Those are <em class="emphasize">her</em> words,<br>
+            not mine</span></p>
     </div>
 
     <div id="walk-out-scene">
@@ -70,6 +75,7 @@
             we could have had a good time, <br>
             so
         </p>
+        <img src="window.webp" id="small-window-left">
         <img src="door-walk-out.webp" id="door">
         <img src="gbird-walk-out.webp" id="gbird-walk-out">
     </div>
@@ -78,7 +84,7 @@
         <p class="regular-text" id="text-bds">
             Birds don't sing, <br>
             they just fall from the sky</p>
-        <img src="window_greenb.webp" id="window-bird-fall">
+        <img src="window.webp" id="window-bird-fall">
     </div>
     
 </body>
