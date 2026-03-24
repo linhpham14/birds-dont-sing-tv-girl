@@ -5,11 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Birds Don't Sing - TV Girl</title>
     <link rel="stylesheet" href="styles.css">
+
+        <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <!-- GSAP ScrollTrigger Plugin, for elements w/ class="scroll-line" -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <!--JS-->
     <script src="script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Indie+Flower&family=Rock+Salt&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <div><img src="light solid.png" id="light">
@@ -32,90 +40,46 @@
         <img src="shelf.webp" id="shelf">
     </div>
 
-    <div>
-        <p class="regular-text" id="she-said">She said,</p>
-        <p class="regular-text" id="text-after-she-said">
-            "How could you joke at a time like this?<br>
-            <br>
-            I know why, 'cause this is what you wanted all along now, isn't it?<br>
-            <br>
-        </p>
-        <img src="She said anim.webp" id="she-said-anim">
-        <p class="regular-text" id="text-after-she-said2">
-            I think that all you ever really ever wanted was a reason to complain<br>
-            <br>
-            That never stopped you before, don't let it get in your way"
-        </p>
+    <div id="she-said-scene">
+        <div id="she-said-ANIM">
+            <img src="She-said-anim-gb.webp" id="she-said-anim-gb">
+            <div id="she-said-TEXT">
+                <p class="regular-text" id="she-said"> <emp class="emphasize">She</emp> said,</p>
+                <p class="regular-text" id="text-after-she-said">
+                    <span class="scroll-line">"How could you joke at a time like this?</span><br>
+                    <br>
+                    <span class="scroll-line">I know why,</span><br>
+                    <br>
+                    <span class="scroll-line">'cause this is what you wanted all along now, isn't it?</span><br>
+                    <br>
+                    <span class="scroll-line">I think that all you ever really ever wanted was a reason to complain</span><br>
+                    <br>
+                    <span class="scroll-line">That never stopped you before, don't let it get in your way</span>
+                </p>
+            </div>
+            <img src="she-said-anim-rb.webp" id="she-said-anim-rb">
+        </div>
+        <p class="regular-text" id="those-are-her">
+            Those are <em class="emphasize">her</em> words,<br>
+            not mine</p>
     </div>
 
+    <div id="walk-out-scene">
+        <p class="regular-text" id="as-far-as1">
+            As far as I'm concerned, <br>
+            we could have had a good time, <br>
+            so
+        </p>
+        <img src="door-walk-out.webp" id="door">
+        <img src="gbird-walk-out.webp" id="gbird-walk-out">
+    </div>
+    
     <div id="bird-fall">
         <p class="regular-text" id="text-bds">
             Birds don't sing, <br>
             they just fall from the sky</p>
         <img src="window_greenb.webp" id="window-bird-fall">
     </div>
-
-    <!--<div>
-        <img src="DONT LISTEN TO MY MUSIC.webp" id="dont-listen">
-    </div>-->
-
-    <!--<script>
-        var x = document.getElementById("bg-music");
-        var musicButton = document.getElementById("music-button");
-
-        function playAudio() {
-            return x.play();
-        }
-
-        function pauseAudio() {
-            x.pause();
-        }
-
-        async function toggleAudio() {
-            if (x.paused) {
-                try {
-                    await playAudio();
-                } catch (error) {
-                    console.error("Audio could not start:", error);
-                }
-            } else {
-                pauseAudio();
-            }
-        }
-
-        musicButton.addEventListener("click", toggleAudio);
-        musicButton.addEventListener("keydown", function (event) {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                toggleAudio();
-            }
-        });
-    </script>-->
     
 </body>
 </html>
-
-<!--Bugs
-- Syntax: lỗi trong code, thiếu dấu, typo, ...
-- Styling errors: có thể fix = ínpect trong trình duyệt rồi cop code vào vscode
-- Selection: 
-- Linking: check ì linked the CORRCECT image/vid... -> sửa=vô trình duyệt inspect, 
-cope tên file đó r paste vô link web (thay chỗ của index.html) nếu không ra là sai file
-    - nếu file tưng nào folder khác mà chuyển đi thì thêm folder-name/ trước tên file 
-        -> vd: A1_S4110327_Pham-Phuong-Linh/curtain.png (this is relative link, USE THIS ONLY)
-        DO NOT embed image DIRECTLY from an external site with an ABSOLUTE link. 
-        DO NOT use ABSOLUTE link in your device too
-
-
-Record screen carefully 
-    - .mov format only
-    - carefully go thru the design
-    - zip -> send to a different device -> see if the web is viewd normally on the dif device
-    - DEPLOY on Github for a live link (submit as comment under a zip file submission)
--->
-
-
-<!--ISSUES WITH DESIGN
-- every elements in a web is component,DO NOT treat them as an image as a whole
-    - DO NOT crop anything, vẽ hết
-    - Chia các components vào các div-->
