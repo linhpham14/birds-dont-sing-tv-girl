@@ -102,11 +102,3 @@ lines.forEach((line) => {
             markers: true,
         },
     });
-
-
-
-
-
-
-
-
