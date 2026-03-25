@@ -90,6 +90,19 @@ lines.forEach((line) => {
   );
 });
 
+    gsap.to("#window-bird-fall", {
+        scale: 2,
+        ease: "power1.inOut",
+        transformOrigin: "to left",
+        scrollTrigger: {
+            trigger: "#if-walk-out",
+            start: "top 85%",
+            end: "bottom 15%",
+            scrub: true,
+            markers: true,
+        },
+    });
+
 
 
 
