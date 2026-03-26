@@ -1,15 +1,19 @@
 html,
 body {
     margin: 0;
-    overflow-x: hidden;
-    background-image: url(bg_img.jpg);
+    background-image: url(bg4.webp);
     background-repeat: repeat;
-    background-size: cover;
-    background-position: left top;
+    background-position: center;
 }
 div {
     display: block;
     unicode-bidi: isolate;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10vh 0;
 }
 
 #curtain {
@@ -22,6 +26,7 @@ div {
 
 #title-scene {
     position: relative;
+    bottom: 0%;
     width: 100%;
     aspect-ratio: 1440 / 1024;
     margin: 0px 0px 20px 0px; /*top right bottom left*/
@@ -29,13 +34,19 @@ div {
 
 #birds-title {
     position: absolute;
-    display: block;
-    top: 0;
+    top: -20%;
     left: 0;
     width: 100vw;
+    height: 100%;
+
+    background-image: url(birds_at_title.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     transform-origin: center;
     animation: animating-birds-title 4s ease-in-out infinite;
 }
+
     @keyframes animating-birds-title {
     0% {
         transform: translateY(0) scale(0.7);
@@ -46,14 +57,20 @@ div {
     100% {
         transform: translateY(0) scale(0.7);
     }
-}
+    }
 #title {
     position: absolute;
-    top: 6vh;
-    left: 50vw;
+    top: -18%;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 3;
     width: 85vw;
+    height: 100%;
+
+    background-image: url(title_no_birds.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 #title-scroll {
     position: absolute;
@@ -69,7 +86,7 @@ h2{
     line-height: 1.2;
 
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 30%;
     z-index: 4;
 
@@ -87,8 +104,8 @@ h2{
     }
     100% {
         transform: translateY(0);
+    }   
     }
-}
 
 #light {
     position: absolute;
@@ -112,12 +129,18 @@ h2{
 }
 #music-button {
     position: absolute;
-    top: -8.5%;
+    top: -18.4%;
     left: 50%;
     display: block;
     transform: translateX(-50%);
     width: 54%;
-    z-index: 2;
+    height: 100%;
+    z-index: 90;
+
+    background-image: url(music-button.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -126,8 +149,15 @@ h2{
     transform: translateX(-50%) scale(1.03);
 }
 #shelf {
+    background-image: url(shelf.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     display: block;
+    position: absolute;
+    top: -13.2%;
     width: 100%;
+    height: 100%;
     aspect-ratio: 109/67;
 }
 
@@ -138,7 +168,7 @@ h2{
     font-size: 1.8vw;
     font-style: normal;
     font-weight: 400;
-    line-height:normal;
+    line-height: 2.5vw;
     margin: 10px 10px 10px 10px;
 }
 .emphasize{
@@ -165,6 +195,7 @@ h2{
         opacity: 1;
     }
 }
+
 /*---TEX EFFECTS ENDS HERE---*/
 
 /*SHE SAID SCENE*/
@@ -173,15 +204,17 @@ h2{
     justify-content: center;
     align-items: flex-end;
     gap: 36px;
+    position: relative;
+    top: 100vh;
 }
 #she-said{
     position: absolute;
-    top: calc(100vw + 490px);
+    top: 0;
     left: 17vw;
 }
 #text-after-she-said{
     position: absolute;
-    top: calc(100vw + 600px);
+    top: 15%;
     left: 30vw;
     text-align: left;
     width: 35vw;
@@ -190,34 +223,51 @@ h2{
 /*VISUAL ELEMENTS*/
 
 #she-said-anim-gb{
+    background-image: url(she-said-anim-gb.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     position: absolute;
     z-index: 5;
     width: 12vw;
     height: auto;
     aspect-ratio: 14/9;
     left: 10vw;
-    top: calc(100vw + 800px);
+    top: 20%;
         /*Đặt vị trí phần tử cách mép trên một 
         khoảng bằng đúng chiều rộng của màn hình cộng 
-        thêm 600 pixel?*/
+        thêm 550 pixel*/
     
-    animation: animating-she-said-GB 3s ease-in-out infinite;
+    animation: animating-she-said-GB 0.5s linear infinite;
 }
     @keyframes animating-she-said-GB {
     0% {
-        transform: translateY(0);
+        transform: translate(0, 0) rotate(0deg);
     }
-    50% {
-        transform: translateY(5px);
+    20% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    60% {
+        transform: translate(-1px, -1px) rotate(-0.6deg);
+    }
+    80% {
+        transform: translate(1px, 1px) rotate(0.6deg);
     }
     100% {
-        transform: translateY(0);
+        transform: translate(0, 0) rotate(0deg);
     }
 }
 #she-said-anim-rb{
+    background-image: url(she-said-anim-rb.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     position: absolute;
     right: 5vw ;
-    top: calc(100vw + 750px);
+    top: 30%;
 
     width: 25vw;
     height: auto;
@@ -235,76 +285,97 @@ h2{
     100% {
         transform: translateY(0);
     }
-}
+    }
 #those-are-her{
     position: absolute;
-    top: calc(100vw + 1300px);
+    top: 80%;
     right: 5vw;
     text-align: right;
 }
 
 #walk-out-scene{
     display: inline-flex;
-    
+    top: 120vh;
 }
 #as-far-as1{
     position: absolute;
-    top: calc(100vw + 1800px);
-    left: 5vw;
+    left: 5%;
+    top: 0%;
 }
 #door{
+    background-image: url(door-walk-out.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
     width: 17vw; 
     height: auto;
     aspect-ratio: 31/79;
     position: absolute;
-    top: calc(100vw + 1800px);
     left: 50%;
     transform: translateX(-50%);
+
+    top: 20%;
 }
 #gbird-walk-out {
+    background-image: url(gbird-walk-out.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
     width: 17vw;
     height: auto;
     aspect-ratio: 31/79;
     position: absolute;
-    top: calc(100vw + 1800px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    pointer-events: none;
+    cursor: pointer;
+
+    top: 20%;
+}
+
+.window{
+    background-image: url(window.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 #small-window-left{
     width: 17vw;
     height: auto;
     position: absolute;
-    top: calc(100vw + 1950px);
     left: 5vw;
 }
 #if-walk-out{
     position: absolute;
-    top: calc(100vw + 2350px);
-    right: 5vw;
-    text-align: right;
-}
-
-
-
-#window-bird-fall{
-    width: 17vw;
-    height: auto;
-    position: absolute;
-    top: calc(100vw + 1950px);
-    right: 5vw;
+    top: 37%;
+    left: 50%;
+    transform: translateX(-70%);
+    text-align: center;
+    width: 6vw;
     z-index: 3;
-    transform-origin: left;
-    transform: scale(1);
-    will-change: transform;
 }
+#nothing-to-discuss{
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    text-align: right;
+    width: 28vw;
+    z-index: 3;
+}   
 
-
+#bird-fall-scene{
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 36px;
+    top: 130vh;
+}
 #text-bds{
     text-align: center;
     position: absolute;
-    top: calc(100vw + 3000px);
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     line-height: 2;
@@ -314,7 +385,7 @@ h2{
     margin: 0 20px;
 }
 #bird-sing:hover{
-    transition: 0.1s;
+    transition: 0s;
     color: #620a0d !important;
 
     font-family: "Carattere", cursive;
@@ -324,18 +395,280 @@ h2{
     line-height: 0;
 }
 #dont:hover{
-    transition: 0.1s;
+    transition: 0s;
     color: #594E0A !important;
     font-family: "Carattere", cursive;
     font-size: 2.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: 0;
-    
 }
+
+#window-bird-fall{
+    width: 17vw;
+    height: 100%;
+    position: absolute;
+    right: 5vw;
+    z-index: 3;
+    transform-origin: left;
+    transform: scale(1);
+    will-change: transform;
+}
+
+
+#girls-dont-call-scene{
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 36px;
+    top: 140vh;
+}   
+#girls-dont-call{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 28vw;
+    z-index: 3;
+}
+#phone-table-container {
+    position: absolute;
+    /* This moves the whole group together */
+    top: 30%; 
+    left: 50%;
+    transform: translateX(-54%);
+    
+    /* Set a width for the container so the children have a coordinate system */
+    width: 25vw; 
+    /* Aspect ratio helps the container maintain the shape of the table */
+    aspect-ratio: 1/1.2; 
+}
+#phone{
+    background-image: url(phone.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 70%; 
+    height: 30%;
+    z-index: 2; 
+}
+
+#small-table{
+    background-image: url(small-table.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;   
+
+    position: absolute;
+    bottom: 0;
+    left: 54%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 3
+}
+
 #dont-listen{
     position: absolute;
     top: 4000px;
     width: 100%;
     scale: 0.8;
+}
+
+
+#many-dont-scene{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 160vh;
+}
+#dont-music{
+    background-image: url(dont-listen-to.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+
+    width: 80vw;
+    height: auto;
+
+    aspect-ratio: 16 / 9; 
+
+}
+#dont-bed{
+    background-image: url(bed.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    top: 90%;
+    width: 50vw;
+    height: auto;
+    aspect-ratio: 1;
+}
+
+#dont-bed::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(blanket.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+#dont-bed-text {
+    color: #FFE283 !important;
+    font-size: 2vw !important;
+    text-shadow: 0 4px 9.9px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+#dont-bed::after:hover {
+    transition: 0s;
+    scale: 0.3;
+}
+
+#dont-bed::after:clicked {
+    transition: 0.1s ease-in;
+    transform: translateY(5px);
+}
+
+#polas-scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20vh;
+    position: relative;
+    width: 100%;
+    top: 290vh;
+
+    perspective: 1000px;
+}
+.pola-card {
+    position: absolute;
+    transform-style: preserve-3d;
+    aspect-ratio: 4/5;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+
+    background-color: rgba(0,0,0,0);
+    pointer-events: auto;
+    will-change: transform;
+}
+.pola-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    pointer-events: none;
+}
+#pola1 { width: 20vw; top: 0; z-index: 1; }
+#pola2 { width: 24vw; top: 50%; z-index: 2; }
+#pola3 { width: 30vw; top: 100%; z-index: 3; }
+
+
+#pola1B, #pola2B, #pola3B {
+    transform: rotateY(180deg);
+}
+
+#pola1F { background-image: url(pola1-F.webp); }
+#pola1B { background-image: url(pola1_B.webp); }
+#pola2F { background-image: url(pola2_F.webp); }
+#pola2B { background-image: url(pola2_B.webp); }
+#pola3F { background-image: url(pola3_F.webp); }
+#pola3B { background-image: url(pola3_B.webp); }
+
+#as-far-as,
+#i-wasnt-trying,
+#she-isnt-crying {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78%;
+    margin: 0;
+    text-align: center;
+    line-height: 1.35;
+}
+
+
+
+#end-scene {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+
+    top: 250vh;
+}
+#o-o1{
+    position: relative;
+    top: 0;
+    left: 5vw;
+}
+#o-o2{
+    position: relative;
+    top: 10%;
+    left: 6vw;
+}
+#o-o3{
+    position: relative;
+    top: 20%;
+    left: 7vw;
+}   
+#o-o4{
+    position: relative;
+    top: 30%;
+    left: 8vw;
+}   
+#o-o5{
+    position: relative;
+    top: 40%;
+    left: 9vw;
+}
+
+#o-o6{
+    position: relative;
+    top: 50%;
+    left: 11vw;
+}
+#o-o7{
+    position: relative;
+    top: 60%;
+    left: 9vw;
+}
+#o-o8{
+    position: relative;
+    top: 70%;
+    left: 7vw;
+}
+#o-o9{
+    position: relative;
+    top: 80%;
+    left: 5vw;
 }
