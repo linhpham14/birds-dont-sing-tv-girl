@@ -23,29 +23,28 @@
 
 </head>
 <body>
-    <div><img src="light solid.png" id="light">
+    <section>
+        <img src="light solid.png" id="light">
         <img src="curtain.png" id="curtain">
         <div id="title-scene" data-speed="0.8">
-            <img src="birds_at_title.webp" id="birds-title">
-            <img src="title_no_birds.webp" id="title">
+            <div id="birds-title"></div>
+            <div id="title"></div>
+        
             <h2>TV Girl</h2>
         </div>
-        <!--h1 class="Title-font" id="Birds">Birds</h1>
-        <h2 class="Title-font" id="Dont">Don't</h2>
-        <h3 class="Title-font" id="Sing">Sing</h3-->
-    </div>
+    </section>
 
     <audio id="bg-music" loop preload="auto">
         <source src="harrisonmiller-vintage-reverie-echoes-283207.mp3" type="audio/mpeg">
     </audio>
-    <div id="shelf-scene">
-        <img src="music-button.webp" id="music-button" alt="Toggle music" role="button" tabindex="0"/>
-        <img src="shelf.webp" id="shelf">
-    </div>
+    <section id="shelf-scene">
+        <div id="music-button" role="button" tabindex="0"></div>
+        <div id="shelf"></div>
+    </section>
 
-    <div id="she-said-scene">
+    <section id="she-said-scene">
         <div id="she-said-ANIM">
-            <img src="She-said-anim-gb.webp" id="she-said-anim-gb">
+            <div id="she-said-anim-gb"></div>
             <div id="she-said-TEXT">
                 <p class="regular-text" id="she-said"> 
                     <span class="scroll-line"><em class="emphasize">She</em> said,</span><br>
@@ -55,7 +54,6 @@
                     <span class="scroll-line">"How could you joke at a time like this?</span><br>
                     <br>
                     <span class="scroll-line">I know why,</span><br>
-                    <br>
                     <span class="scroll-line">'cause this is what you wanted all along now, isn't it?</span><br>
                     <br>
                     <span class="scroll-line">I think that all you ever really ever wanted was a reason to complain</span><br>
@@ -63,45 +61,129 @@
                     <span class="scroll-line">That never stopped you before, don't let it get in your way</span>
                 </p>
             </div>
-            <img src="she-said-anim-rb.webp" id="she-said-anim-rb">
+            <div id="she-said-anim-rb"></div>
         </div>
         <p class="regular-text" id="those-are-her">
             <span class="scroll-line">Those are <em class="emphasize">her</em> words,<br>
             not mine</span></p>
-    </div>
+    </section>
 
-    <div id="walk-out-scene">
+    <section id="walk-out-scene">
         <p class="regular-text" id="as-far-as1">
             <span class="scroll-line">As far as I'm concerned,</span> <br>
             <span class="scroll-line">we could have had a good time,</span> <br>
             <span class="scroll-line">so</span>
         </p>
-        <img src="window.webp" id="small-window-left">
-        <img src="door-walk-out.webp" id="door">
-        <img src="gbird-walk-out.webp" id="gbird-walk-out">
+        
+        <div id="door"></div>
+        <div id="gbird-walk-out"></div>
         <p class="regular-text" id="if-walk-out">
-             <span class="scroll-line">If you walk out that door in disgust</span> <br>
-             <br>
-            <span class="scroll-line">I guess there's nothing more to discuss</span></p>
-    </div>
+            <span class="scroll-line">If you walk out that door in disgust</span>
+        </p>
+        <p class="regular-text" id="nothing-to-discuss">
+            <span class="scroll-line">I guess there's nothing more to discuss</span>
+        </p>   
+
+        <div class="window" id="small-window-left"></div>
+    </section>
     
-    <div id="bird-fall">
+    <section id="bird-fall-scene">
+        
         <p class="regular-text" id="text-bds">
             <span class="scroll-line" id="bird-sing">Birds  </span>
             <span class="scroll-line" id="dont"> don't </span> 
             <span class="scroll-line" id="bird-sing"> sing,</span> <br>
             <br>
             <span class="scroll-line">they just fall from the sky</span></p>
-        <img src="window.webp" id="window-bird-fall">
+        <div class="window" id="window-bird-fall"></div>
+    </section>
 
-        <p class="regular-text"> 
+    <section id="girls-dont-call-scene">
+        <p class="regular-text" id="girls-dont-call"> 
             <span class="scroll-line">Girls don't call </span><br>
-            <span class="scroll-line">and they never tell you why</span></p>
-        <div>
-            <img src="phone.webp" id="phone">
-            <img src="small-table.webp" id="small-table">
+            <span class="scroll-line">and they never tell you why</span><br>
+            <br>
+            <span class="scroll-line">That's just how they say goodbye</span>
+        </p>
+        <div id="phone-table-container">
+            <div id="phone"></div>
+            <div id="small-table"></div>
+        </div>
+    </section>
+
+    <section id="many-dont-scene">
+        <div id="dont-music"></div>
+        <div id="dont-bed">
+            <p class="regular-text" id="dont-bed-text">
+                <span class="scroll-line">Don't lie in my bed</span>
+            </p>
+        </div>
+        <div id="dont-ref"></div>
+    </section>
+
+    <section id="polas-scene">
+    <div id="pola1" class="pola-card">
+        <div id="pola1F" class="pola-face"></div>
+        <div id="pola1B" class="pola-face">
+            <p class="regular-text" id="as-far-as">
+                As far as I'm concerned,<br>
+                <br>
+                it could have been a lot worse
+            </p>
         </div>
     </div>
+
+    <div id="pola2" class="pola-card">
+        <div id="pola2F" class="pola-face"></div>
+        <div id="pola2B" class="pola-face">
+            <p class="regular-text" id="i-wasnt-trying">
+                I wasn't trying to avoid the confrontation
+            </p>
+        </div>
+    </div>
+
+    <div id="pola3" class="pola-card">
+        <div id="pola3F" class="pola-face"></div>
+        <div id="pola3B" class="pola-face">
+            <p class="regular-text" id="she-isnt-crying">
+                She isn't crying, <br>
+                <br>
+                she's just making conversation
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <section id="end-scene">
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o1">Over and over</span>
+        </p>
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o2">Over and over again</span>
+        </p>
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o3">Over and over again</span>
+        </p>
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o4">Over and over again</span>
+        </p>
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o5">Over, over</span>
+        </p>
+
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o6">Over and over</span>
+        </p>
+        <!--<p class="regular-text">
+            <span class="scroll-line" id="o-o7">Over and over again</span>
+        </p>
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o8">Over and over again</span>
+        </p>
+        <p class="regular-text">
+            <span class="scroll-line" id="o-o9">Over, over</span>
+        </p>--> 
+    </section>
     
 </body>
 </html>
